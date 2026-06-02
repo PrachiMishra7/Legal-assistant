@@ -15,6 +15,9 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 # Copy the rest of the application files and change ownership to the non-root user
 COPY --chown=user:user . /app
 
+# Explicitly change ownership of the /app directory so the app can create folders
+RUN chown -R user:user /app
+
 # Switch to the non-root user
 USER user
 ENV HOME=/home/user \
