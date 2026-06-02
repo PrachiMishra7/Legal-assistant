@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+gunicorn
+pydantic
+python-multipart
+faiss-cpu
+numpy
+sentence-transformers
+pypdf
+pandas
+langdetect
+deep-translator
+requests
+urllib3
+torch
