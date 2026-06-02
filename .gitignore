@@ -61,11 +61,8 @@ env.bak/
 venv.bak/
 
 # Vector DB and data
-vector_db/
 uploaded_docs/
 models/
-*.pkl
-*.faiss
 
 # IDEs
 .vscode/
