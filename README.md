@@ -12,6 +12,11 @@ pinned: false
 
 An AI-based Legal Assistant that analyzes FIR documents using IPC & CrPC provisions. It uses RAG (Retrieval-Augmented Generation) to process user queries and uploaded PDFs, matching them against legal databases.
 
+## Live Demo
+You can try the application live at the following links:
+- **Main Space Page (with code & repo):** [https://huggingface.co/spaces/prachi7/ai-legal-assistant](https://huggingface.co/spaces/prachi7/ai-legal-assistant)
+- **Fullscreen Web App (Direct Link):** [https://prachi7-ai-legal-assistant.hf.space](https://prachi7-ai-legal-assistant.hf.space)
+
 ## Features
 - **Text Analysis:** Paste FIR text directly to identify relevant IPC & CrPC sections.
 - **PDF Upload:** Upload FIR PDFs for automatic extraction and analysis.
