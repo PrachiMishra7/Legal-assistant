@@ -1,3 +1,13 @@
+---
+title: AI Legal Assistant
+emoji: ⚖️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # AI Legal Assistant
 
 An AI-based Legal Assistant that analyzes FIR documents using IPC & CrPC provisions. It uses RAG (Retrieval-Augmented Generation) to process user queries and uploaded PDFs, matching them against legal databases.
