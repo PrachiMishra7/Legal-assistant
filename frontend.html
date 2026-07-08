@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Legal Assistant – FIR Analysis</title>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- CHANGED: use the correct UMD build of Chart.js so it registers components properly -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -814,7 +815,7 @@ canvas {
 </div>
 
 <script>
-let chart, metricChart;
+let distributionChart, metricChart;
 
 async function analyze(){
   const fir=document.getElementById("fir").value;
@@ -986,8 +987,8 @@ function renderResults(data){
   const ipcCount = data.ipc_count || 0;
   const crpcCount = data.crpc_count || 0;
   
-  if(chart) chart.destroy();
-  chart = new Chart(document.getElementById("chart"), {
+  if(distributionChart) distributionChart.destroy();
+  distributionChart = new Chart(document.getElementById("chart"), {
     type: "doughnut",
     data: {
       labels: ["IPC Sections", "CrPC Sections"],
