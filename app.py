@@ -210,8 +210,9 @@ async def upload_pdf(file: UploadFile = File(...)):
         )
 
     k = 5
-    precision_at_k = round(len(ipc_sections) / k, 2) if sections else 0.0
-    recall_at_k = round(min(len(ipc_sections), 2) / 2, 2) if ipc_sections else 0.0
+    total_relevant = len(ipc_sections) + len(crpc_sections)
+    precision_at_k = round(total_relevant / k, 2) if sections else 0.0
+    recall_at_k = round(min(total_relevant, 3) / 3, 2) if total_relevant else 0.0
     accuracy = round((precision_at_k + recall_at_k) / 2, 2)
 
     return {
@@ -261,8 +262,9 @@ def analyze_fir(req: FIRRequest):
         )
 
     k = 5
-    precision_at_k = round(len(ipc_sections) / k, 2) if sections else 0.0
-    recall_at_k = round(min(len(ipc_sections), 2) / 2, 2) if ipc_sections else 0.0
+    total_relevant = len(ipc_sections) + len(crpc_sections)
+    precision_at_k = round(total_relevant / k, 2) if sections else 0.0
+    recall_at_k = round(min(total_relevant, 3) / 3, 2) if total_relevant else 0.0
     accuracy = round((precision_at_k + recall_at_k) / 2, 2)
 
     return {

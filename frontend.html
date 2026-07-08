@@ -453,6 +453,8 @@ input[type="file"] {
   position: relative;
   z-index: 2;
   animation: numberPulse 2s ease-in-out infinite;
+  padding-bottom: 0.1em;
+  line-height: 1.1;
 }
 
 @keyframes numberPulse {
@@ -918,7 +920,7 @@ function renderResults(data){
           'rgba(20, 184, 166, 1)',
           'rgba(236, 72, 153, 1)'
         ],
-        borderWidth: 2,
+        borderWidth: [precision > 0 ? 2 : 0, recall > 0 ? 2 : 0, accuracy > 0 ? 2 : 0],
         borderRadius: 10,
         borderSkipped: false
       }]
@@ -1002,7 +1004,7 @@ function renderResults(data){
           'rgba(139, 92, 246, 1)',
           'rgba(20, 184, 166, 1)'
         ],
-        borderWidth: 3,
+        borderWidth: [ipcCount > 0 ? 3 : 0, crpcCount > 0 ? 3 : 0],
         hoverOffset: 15
       }]
     },
